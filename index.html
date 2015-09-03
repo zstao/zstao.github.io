@@ -4,14 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>website</title>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="lib/js/typed.js"></script>
 </head>
 <body>
-hello
-<div><span id="test"></span></div>
+<div style="position: absolute; top: 50%; left: 50%; margin-left: -115px; margin-top: -140px; font-size: 60px">
+    <span id="welcome" style="font-size: 55px; text-align: center"></span>
+</div>
 </body>
 <script>
     setTimeout(function () {
         window.location.href = "http://blog.zstao.tk";
-    }, 2000);
+    }, 3000);
+    $('#welcome').typed({
+        strings: ["-Hello", "-Welcome"],
+        typeSpeed: 50,
+        backDelay: 200
+    });
+</script>
+<script>
+    (function ($) {
+        $.fn.snow = function (options) {
+            var $flake = $('<div id="flake" />').css({
+                'position': 'absolute',
+                'top': '-50px'
+            }).html('&#10052;'), documentHeight = $(document).height(), documentWidth = $(document).width(), defaults = {
+                minSize: 10,
+                maxSize: 20,
+                newOn: 2000,
+                flakeColor: "red"
+            }, options = $.extend({}, defaults, options);
+            var interval = setInterval(function () {
+                var startPositionLeft = Math.random() * documentWidth - 100, startOpacity = 0.5 + Math.random(), sizeFlake = options.minSize + Math.random() * options.maxSize, endPositionTop = documentHeight - 40, endPositionLeft = startPositionLeft - 100 + Math.random() * 200, durationFall = documentHeight * 10 + Math.random() * 5000;
+                $flake.clone().appendTo('body').css({
+                    left: startPositionLeft,
+                    opacity: startOpacity,
+                    'font-size': sizeFlake,
+                    color: options.flakeColor
+                }).animate({
+                    top: endPositionTop,
+                    left: endPositionLeft,
+                    opacity: 0.2
+                }, durationFall, 'linear', function () {
+                    $(this).remove()
+                });
+            }, options.newOn);
+        };
+    })(jQuery);
+    $.fn.snow({minSize: 5, maxSize: 50, newOn: 2000, flakeColor: 'red'});
 </script>
 </html>
