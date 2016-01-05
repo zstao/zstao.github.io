@@ -1,0 +1,22 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zstao/zstao.github.io.git"
+  },
+  "author": "ZSt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zstao/zstao.github.io/issues"
+  },
+  "homepage": "https://github.com/zstao/zstao.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
