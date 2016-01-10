@@ -1,7 +1,7 @@
 {
   "name": "mywebsite",
   "version": "1.0.0",
-  "description": "",
+  "description": "zst",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,7 @@
   },
   "homepage": "https://github.com/zstao/zstao.github.io#readme",
   "devDependencies": {
+    "webpack": "^1.12.10",
+    "webpack-dev-server": "^1.14.0"
   }
 }
