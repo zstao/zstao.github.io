@@ -17,6 +17,5 @@
   },
   "homepage": "https://github.com/zstao/zstao.github.io#readme",
   "devDependencies": {
-    "gulp": "^3.9.0"
   }
 }
